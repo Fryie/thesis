@@ -1,0 +1,30 @@
+% see http://ftp.uni-erlangen.de/mirrors/CTAN/info/latex-samples/TitlePages/titlepages.pdf - ex. 16, p. 19
+
+\newlength{\drop}% for my convenience
+
+% The following commands have to be defined:
+% \@author (via \author)
+% \@title (via \title)
+% \University
+% \ThesisType
+% \Remarks
+
+\pagestyle{empty}
+\begin{titlepage}
+\makeatletter % prevent issues with \@author, \@title
+\begingroup%MS Thesis
+\drop=0.1\textheight
+\vspace*{\drop}
+\centering
+{\LARGE \University}\\[2\baselineskip]
+{\LARGE\sffamily \@title}\par
+\vfill
+{\LARGE \MakeUppercase{\ThesisType}}\par
+\vspace{\drop}
+{\large \Remarks}\par
+\vfill
+{\large\bfseries \@author}\par
+\vspace*{\drop}
+\endgroup
+\makeatother
+\end{titlepage}
