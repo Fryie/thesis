@@ -1,6 +1,6 @@
 .PHONY: chapters
 
-split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib chapters
+split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsalike.bst chapters
 	latexmk -xelatex main.tex
 	latexmk -c
 	mv main.pdf split-intransitivity-arawak.pdf
