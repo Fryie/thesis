@@ -5,6 +5,7 @@
 \usepackage{natbib}
 \setcitestyle{notesep={:}}
 \bibliographystyle{bib/lsalike}
+\def\lsaand{\& } % or the style won't work correctly
 
 % metadata
 \author{Pierpaolo Frasa}
@@ -12,6 +13,8 @@
 \newcommand*{\University}{Universit\"at zu K\"oln}
 \newcommand*{\ThesisType}{Master's Thesis}
 \newcommand*{\Remarks}{}
+
+% set up PDF
 \usepackage[pdfusetitle]{hyperref}
 
 \begin{document}
@@ -24,7 +27,7 @@
 
 % Here be individual chapters (use \input{chapterX/chapterX.tex})
 \chapter{Test}
-\citet{arkadiev2008}, \citet{donohue2008}
+\citet{arkadiev08}, \citet{donohue08}, \citet[32]{malchukov08}, \citep{mithun91}
 
 % Here be the bibliography
 \bibliography{bib/references}
