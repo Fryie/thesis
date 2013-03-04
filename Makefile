@@ -1,6 +1,7 @@
 .PHONY: chapters
 
 split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsalike.bst chapters
+	sed -i 's/S\\o ren/S{\\o}ren/g' bib/references.bib # fix Mendeley Bibtex output
 	latexmk -xelatex main.tex
 	latexmk -c
 	mv main.pdf split-intransitivity-arawak.pdf
