@@ -27,7 +27,10 @@
 \setsansfont{Linux Biolinum O}
 
 % enumeration style
-\renewcommand{\labelenumi}{\roman{enumi})}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\makeatletter
+\renewcommand{\theequation}{\@arabic\c@equation} % fix a problem with example numbering
+\makeatother
 
 % footnote style
 \deffootnote[2em]{0em}{-0.8em}{\textsuperscript{\thefootnotemark}}
@@ -46,6 +49,7 @@
 
 \setcounter{page}{1}
 \tableofcontents
+\listoftables
 
 % Here be individual chapters (use \input{chapterX/chapter.tex})
 \input{chapter1/chapter.tex}

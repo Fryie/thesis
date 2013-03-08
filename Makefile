@@ -8,5 +8,5 @@ split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsali
 
 chapters: chapter1/chapter.tex chapter2/chapter.tex
 
-chapter%/chapter.tex: chapter%/chapter.md
+chapter%/chapter.tex: chapter%/chapter.mmd
 	multimarkdown -t latex -b $<
