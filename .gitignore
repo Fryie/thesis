@@ -1,0 +1,9 @@
+*
+!.gitignore
+!Makefile
+!*.tex
+!bib/
+!bib/*
+!chapter*/
+chapter*/*
+!chapter*/*.mmd
