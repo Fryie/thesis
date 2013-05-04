@@ -17,6 +17,9 @@
 \newcommand*{\ThesisType}{Master's Thesis}
 \newcommand*{\Remarks}{in General Linguistics\\Supervisor: Prof. Dr. Nikolaus P. Himmelmann}
 
+% load chngcntr before hyperref
+\usepackage{chngcntr}
+
 % set up PDF
 \usepackage[pdfusetitle,hidelinks]{hyperref}
 
@@ -28,9 +31,6 @@
 
 % enumeration style
 \renewcommand{\labelenumi}{(\alph{enumi})}
-\makeatletter
-\renewcommand{\theequation}{\@arabic\c@equation} % fix a problem with example numbering
-\makeatother
 
 % footnote style
 \deffootnote[2em]{0em}{-0.8em}{\textsuperscript{\thefootnotemark}}
@@ -42,6 +42,10 @@
 
 % linguistics package
 \usepackage{covington}
+
+% numbering fixes (don't reset equation and footnote numbers each chapter)
+\counterwithout{equation}{chapter}
+\counterwithout*{footnote}{chapter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
