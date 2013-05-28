@@ -9,6 +9,9 @@ split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsali
 chapter%/chapter.tex: chapter%/chapter.mmd
 	multimarkdown -t latex -b $<
 
+clean:
+	rm main.aux main.fdb_latexmk main.fls main.log main.lot main.out main.pdf main.toc chapter1/chapter.tex chapter2/chapter.tex chapter3/chapter.tex
+
 stats:
 	@echo `pdfinfo split-intransitivity-arawak.pdf | grep Pages`
 	@echo `pdftotext split-intransitivity-arawak.pdf - | wc -l` lines
