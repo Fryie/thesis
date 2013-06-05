@@ -21,8 +21,11 @@ chapter%/chapter.tex: chapter%/chapter.mmd
 clean:
 	rm -f main.aux main.fdb_latexmk main.fls main.log main.lot main.out main.pdf main.toc chapter1/chapter.tex chapter2/chapter.tex chapter3/chapter.tex
 
-stats:
+stats: split-intransitivity-arawak.pdf
 	@echo `pdfinfo split-intransitivity-arawak.pdf | grep Pages`
 	@echo `pdftotext split-intransitivity-arawak.pdf - | wc -l` lines
 	@echo `pdftotext split-intransitivity-arawak.pdf - | wc -w` words
 	@echo `pdftotext split-intransitivity-arawak.pdf - | wc -m` characters
+
+open: split-intransitivity-arawak.pdf
+	acroread split-intransitivity-arawak.pdf
