@@ -1,6 +1,6 @@
 .PHONY: stats
 
-split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsalike.bst chapter1/chapter.tex chapter2/chapter.tex chapter3/chapter.tex
+split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsalike.bst chapter1/chapter.tex chapter2/chapter.tex chapter3/chapter.tex chapter4/chapter.tex
   # some Latex preprocessing
 	# fix Mendeley Bibtex output
 	sed -i 's/S\\o ren/S{\\o}ren/g' bib/references.bib
@@ -22,7 +22,7 @@ chapter%/chapter.tex: chapter%/chapter.mmd
 	multimarkdown -t latex -b $<
 
 clean:
-	rm -f main.aux main.fdb_latexmk main.fls main.log main.lot main.out main.pdf main.toc chapter1/chapter.tex chapter2/chapter.tex chapter3/chapter.tex
+	rm -f main.aux main.fdb_latexmk main.fls main.log main.lot main.out main.pdf main.toc chapter1/chapter.tex chapter2/chapter.tex chapter3/chapter.tex chapter4/chapter.tex
 
 stats: split-intransitivity-arawak.pdf
 	@echo `pdfinfo split-intransitivity-arawak.pdf | grep Pages`
