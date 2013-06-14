@@ -10,7 +10,9 @@ split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsali
 	sed -i -r 's/\<SAV\>/S\\textsubscript{A}V/g' chapter*/chapter.tex
 	sed -i -r 's/\<VSP\>/VS\\textsubscript{P}/g' chapter*/chapter.tex
 	# exclude citations from list of tables
-	sed -i -r 's/(\\caption)(\{(.+) (~?\\citep\[.+\]\{.+\})\})/\1\[\3\]\2/g' chapter*/chapter.tex
+	sed -i -r 's/(\\caption)(\{(.+) (~?\\citep(\[.+\])?\{.+\})\})/\1\[\3\]\2/g' chapter*/chapter.tex
+	# remove stupid space before citations
+	sed -i -r 's/~\\citep/\\citep/g' chapter*/chapter.tex
 
   # compile
 	latexmk -xelatex main.tex
