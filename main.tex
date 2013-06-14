@@ -51,10 +51,12 @@
 \begin{document}
 \input{title}
 
-\setcounter{page}{1}
+\pagenumbering{roman}
 \tableofcontents
 \listoftables
 
+\clearpage
+\pagenumbering{arabic}
 % Here be individual chapters (use \input{chapterX/chapter.tex})
 \input{chapter1/chapter.tex}
 \input{chapter2/chapter.tex}
