@@ -4,6 +4,7 @@ split-intransitivity-arawak.pdf: main.tex title.tex bib/references.bib bib/lsali
   # some Latex preprocessing
 	# fix Mendeley Bibtex output
 	sed -i 's/S\\o ren/S{\\o}ren/g' bib/references.bib
+
 	# turn Sa, Sp, etc. into subscripted variant 
 	sed -i -r 's/\<S(A|P|O|io)\>/S\\textsubscript{\1}/g' chapter*/chapter.tex
 	# also SaV and VSp

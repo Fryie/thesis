@@ -1,3 +1,5 @@
+% Small bugfixes: Add new.block before year to misc and phdthesis (Pierpaolo Frasa)
+%
 % BibTeX `lsalike' bibliography style (06-Jan-94)
 % 
 % Designed by Dan Jurafsky, modified from a version of `apalike.bst' augmented 
@@ -842,6 +844,7 @@ FUNCTION {mastersthesis}
 FUNCTION {misc}
 { output.bibitem
   format.rev.authors output
+  new.block
   author format.key output				% special for
   output.year.check					% lsa
   new.block
@@ -856,6 +859,7 @@ FUNCTION {misc}
 FUNCTION {phdthesis}
 { output.bibitem
   format.rev.authors "author" output.check
+  new.block
   author format.key output				% special for
   output.year.check					% lsa
   new.block
