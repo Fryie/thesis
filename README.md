@@ -1,4 +1,4 @@
-# Split intransitivity in the Arawak languages
+## Split intransitivity in the Arawak languages
 
 Master's thesis in General Linguistics
 
