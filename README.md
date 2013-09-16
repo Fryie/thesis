@@ -1,3 +1,5 @@
-# Master's thesis
+# Split intransitivity in the Arawak languages
 
-Currently this repo contains only the skeleton files and not the actual contents of my thesis. I might change that later.
+Master's thesis in General Linguistics
+
+Handover date: June 20th, 2013
